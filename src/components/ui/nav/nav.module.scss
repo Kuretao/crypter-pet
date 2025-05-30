@@ -1,0 +1,17 @@
+@import "./../../../styles/variables";
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+
+  a{
+    font-size: 12px;
+    line-height: 24px;
+    color: $neutral-07;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

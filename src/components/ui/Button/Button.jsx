@@ -1,24 +1,24 @@
-
+import styles from './button.module.scss';
 
 
 export const Button = ({additionalClass, text, maxWidth}) =>{
     let btnClass;
     switch(additionalClass){
         case "transparent":
-            btnClass = "button-transparent";
+            btnClass = styles["button--transparent"];
             break;
             case "dark":
-                btnClass = "button--dark";
+                btnClass = styles["button--dark"];
                 break;
                 case "white":
-                    btnClass = "button--white";
+                    btnClass = styles["button--white"];
                     break;
         default:
             btnClass = '';
     }
     return(
         <>
-            <button className={`btn ${btnClass}`} style={{maxWidth}}>{text}</button>
+            <button className={`${styles.btn} ${btnClass}`} style={{maxWidth}}>{text}</button>
         </>
     );
 }

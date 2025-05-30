@@ -1,0 +1,37 @@
+@import "./../../styles/variables";
+
+.header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 clamp(24px, 10vw, 40px);
+
+  &__leftside{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0.55;
+    border-right: 1px solid $neutral-03;
+    border-bottom: 1px solid $neutral-03;
+    padding: clamp(16px, 10vh, 22px) 0;
+    padding-right: 32px;
+  }
+
+  &__search-container{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__rightside{
+    display: flex;
+    justify-content: flex-end;
+    flex: 0.45;
+    border-bottom: 1px solid $neutral-03;
+    padding: clamp(16px, 10vh, 22px) 0;
+  }
+
+
+}
