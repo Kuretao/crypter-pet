@@ -1,4 +1,4 @@
-import './App.css'
+import './../styles/globals.scss';
 import {AppRoutes} from "./routes.jsx";
 import {BrowserRouter} from "react-router-dom";
 import {Header} from "../components/header/header.jsx";
