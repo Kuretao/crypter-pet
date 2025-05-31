@@ -1,0 +1,54 @@
+@import "./../../../styles/variables";
+
+.welcome-section{
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 97px);
+
+
+  .header{
+    display: flex;
+    flex-direction: row;
+    padding: clamp(24px, 10vw, 48px) clamp(40px, 10vw, 80px);
+    gap: clamp(40px, 10vw, 80px);
+
+
+    > *{
+      flex: 0.5;
+    }
+
+    > :first-child{
+      position: relative;
+
+      img{
+        position: absolute;
+        right: 0;
+        top: 2vh;
+      }
+    }
+
+    > :last-child{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-top: 3vh;
+
+      a{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        color: $neutral-07;
+
+        img{
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
