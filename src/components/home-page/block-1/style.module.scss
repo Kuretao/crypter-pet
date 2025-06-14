@@ -7,7 +7,6 @@
   height: calc(100vh - 97px);
   overflow: hidden;
 
-
   .header{
     display: flex;
     flex-direction: row;
@@ -46,6 +45,7 @@
         line-height: 24px;
         letter-spacing: 2px;
         font-weight: 700;
+        text-transform: uppercase;
         color: $neutral-07;
 
         img{
@@ -65,7 +65,7 @@
 
     > *{
       flex: 0.5;
-      min-width: 0;
+      min-width: 50%;
     }
 
     .main-slider {
@@ -100,7 +100,54 @@
         padding: clamp(8px, 5vw, 12px) clamp(12px, 5vw, 24px);
         background-color: $neutral-01;
         border-radius: 12px;
+
+        box-shadow: 0 16px 40px -8px #00000012;
+
+        li{
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          span:first-child{
+            color: $neutral-06;
+            font-weight: bold;
+          }
+
+          span:last-child{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+          }
+        }
+      }
+
+      >div{
+        display: flex;
+        flex-direction: column;
+        gap: clamp(24px, 8vh, 48px);
+
+        .btns{
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          width: 100%;
+
+          button{
+            width: 100%;
+          }
+        }
       }
     }
+  }
+}
+
+@media screen and (max-height: 1080px) {
+  .welcome-section{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    height: calc(120vh - 97px);
+    overflow: hidden;
   }
 }

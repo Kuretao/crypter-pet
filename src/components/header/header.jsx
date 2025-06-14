@@ -7,7 +7,6 @@ import {Button} from "../ui/Button/Button.jsx";
 import {Nav} from "../ui/nav/nav.jsx";
 import styles from "./header.module.scss"
 
-
 export const Header = () => {
     const [search, setSearch] = useAtom(searchAtoms);
     const [show, setShow] = useAtom(searchShowAtoms);

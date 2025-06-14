@@ -3,6 +3,12 @@ import arrow from './../../../assets/images/arrow__big.svg'
 import sphere from './../../../assets/icons/sphere.svg'
 import slide1 from './../../../assets/images/img.png'
 import {Button} from "../../ui/Button/Button.jsx";
+import 'swiper/css'
+import {Swiper} from "swiper/react";
+import {SwiperSlide} from "swiper/react";
+import SwiperCore from 'swiper';
+import { Mousewheel } from 'swiper/modules';
+SwiperCore.use([Mousewheel]);
 
 const HomeWelcomeHeader = () =>{
     return (
@@ -40,9 +46,19 @@ const HomeWelcomeMain = () =>{
     ]
     return (
         <div className={styles.main}>
-            <div className={styles["main-slider"]}>
-                <img src={slide1} alt="main-img"/>
-            </div>
+            <Swiper
+                    direction="vertical"
+                    mousewheel={true}
+                    modules={[Mousewheel]}
+                    className={styles["main-slider"]}
+                >
+                    <SwiperSlide>
+                        <img src={slide1} alt="main-img"/>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={slide1} alt="main-img"/>
+                    </SwiperSlide>
+            </Swiper>
             <div className={styles["main-content"]}>
                 <ul className={styles["main-content-info"]}>
                     {info.map((item, index) => (
